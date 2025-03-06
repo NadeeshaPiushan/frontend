@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Operator Page</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <div class="image-container">
+      <img class="logo-image" src="logo1.png" alt="top logo">
+    </div>
+    <div class="digit-container">
+      <div class="digit-display" id="digit1">0</div>
+      <div class="digit-display" id="digit2">0</div>
+      <div class="digit-display" id="digit3">0</div>
+    </div>
+    <div class="button-container">
+      <button id="rollButton">Roll</button>
+      <button id="refreshButton">Refresh</button>
+    </div>
+    <div class="image-container bottom">
+      <img class="logo-image" src="logo2.png" alt="bottom logo">
+    </div>
+  </div>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="operator.js"></script>
+</body>
+</html>
+
+
+

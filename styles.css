@@ -1,0 +1,147 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    min-height: 100vh;
+    background-image: url('background.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #b5141f; /* Fallback color */
+    overflow: hidden; /* Prevents scrolling */
+}
+
+.container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: clamp(10px, 2vh, 30px);
+    box-sizing: border-box;
+}
+
+/* Top Logo */
+.logo-image {
+    height: clamp(150px, 30vh, 400px);
+    width: auto;
+    object-fit: contain;
+}
+
+/* Bottom Logo */
+.image-container.bottom .logo-image {
+    height: clamp(60px, 15vh, 200px); /* Smaller than top logo */
+    width: auto;
+    object-fit: contain;
+}
+
+.digit-container {
+    display: flex;
+    justify-content: center;
+    gap: clamp(5px, 2vw, 20px);
+    margin: clamp(10px, 2vh, 30px) 0;
+}
+
+.digit-display {
+    font-size: clamp(24px, 5vw, 48px);
+    font-weight: bold;
+    background-color: white;
+    padding: clamp(5px, 1.5vh, 10px) clamp(10px, 2vw, 20px);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    min-width: clamp(40px, 8vw, 80px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin: clamp(10px, 2vh, 20px) 0;
+}
+
+#rollButton,
+#refreshButton {
+    font-size: clamp(14px, 2vw, 16px);
+    width: clamp(180px, 30vw, 243px);
+    padding: clamp(8px, 1.5vh, 10px) clamp(15px, 2vw, 20px);
+    background-color: #ff0000;
+    color: white;
+    border-color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#rollButton:hover,
+#refreshButton:hover {
+    background-color: #cc0000;
+    color: white;
+}
+
+/* Responsive Design */
+@media screen and (max-height: 600px) {
+    .container {
+        padding: 5px;
+    }
+    
+    .logo-image {
+        height: 20vh;
+    }
+    
+    .image-container.bottom .logo-image {
+        height: 12vh;
+    }
+    
+    .digit-container {
+        margin: 10px 0;
+    }
+    
+    .button-container {
+        gap: 5px;
+    }
+}
+
+/* For very wide screens */
+@media screen and (min-width: 1920px) {
+    .container {
+        max-width: 1800px;
+        margin: 0 auto;
+    }
+    
+    .digit-display {
+        font-size: 48px;
+        padding: 10px 30px;
+    }
+}
+
+/* For mobile devices in landscape */
+@media screen and (max-height: 500px) and (orientation: landscape) {
+    .container {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+    
+    .logo-image {
+        height: 15vh;
+    }
+    
+    .image-container.bottom .logo-image {
+        height: 10vh;
+    }
+    
+    .digit-container {
+        margin: 5px 0;
+    }
+}
+
+
+
+  
+
+ 
